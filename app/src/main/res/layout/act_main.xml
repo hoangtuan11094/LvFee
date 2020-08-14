@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:ignore="MissingConstraints"
+    tools:context=".ActMain">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_mask" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clTop"
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+
+            <com.lvfree.lvfee.view.CustomTextView
+                style="@style/LblTitleView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tuấn Dung Love"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_setting"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.lvfree.lvfee.view.WaveLoadingView
+            android:id="@+id/waveLoadingView"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_below="@+id/clTop"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            app:wlv_borderColor="@color/colorAccent"
+            app:wlv_borderWidth="4dp"
+            app:wlv_progressValue="80"
+            app:wlv_round_rectangle="true"
+            app:wlv_shapeType="circle"
+            app:wlv_triangle_direction="north"
+            app:wlv_waveAmplitude="70"
+            app:wlv_waveColor="@color/colorAccent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clInfor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/waveLoadingView">
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gui25"
+                app:layout_constraintGuide_percent="0.25"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gui50"
+                app:layout_constraintGuide_percent="0.5"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gui75"
+                app:layout_constraintGuide_percent="0.75"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/ivBoy"
+                app:layout_constraintEnd_toEndOf="@+id/gui25"
+                app:layout_constraintStart_toStartOf="@+id/gui25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_boy"
+                 />
+
+            <com.lvfree.lvfee.view.CustomTextView
+                android:text="Tuấn"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/gui25"
+                app:layout_constraintStart_toStartOf="@+id/gui25"
+                app:layout_constraintTop_toBottomOf="@+id/ivBoy"
+                style="@style/LblNameView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.lvfree.lvfee.view.CustomTextView
+                android:text="Dung"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/gui75"
+                app:layout_constraintStart_toStartOf="@+id/gui75"
+                app:layout_constraintTop_toBottomOf="@+id/ivBoy"
+                style="@style/LblNameView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                app:layout_constraintEnd_toEndOf="@+id/gui75"
+                app:layout_constraintStart_toStartOf="@+id/gui75"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_girl" />
+
+            <com.lvfree.lvfee.view.AVLoadingIndicatorView
+                android:id="@+id/indicator"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/gui50"
+                app:layout_constraintStart_toStartOf="@+id/gui50"
+                style="@style/AVLoadingIndicatorView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                app:indicatorColor="@color/colorAccent"
+                app:indicatorName="BallScaleRippleIndicator" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llNumberDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/clInfor"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                o></LinearLayout>
+            <com.lvfree.lvfee.view.CustomTextView
+                android:id="@+id/tvY"
+                style="@style/LblDateView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12" />
+
+            <com.lvfree.lvfee.view.CustomTextView
+                android:id="@+id/tvM"
+                style="@style/LblDateView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12" />
+
+            <com.lvfree.lvfee.view.CustomTextView
+                android:id="@+id/tvW"
+                style="@style/LblDateView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12" />
+
+            <com.lvfree.lvfee.view.CustomTextView
+                android:id="@+id/tvD"
+                style="@style/LblDateView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12" />
+
+            <com.lvfree.lvfee.view.CustomTextView
+                android:id="@+id/tvH"
+                style="@style/LblDateView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12" />
+
+            <com.lvfree.lvfee.view.CustomTextView
+                android:id="@+id/tvMu"
+                style="@style/LblDateView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12" />
+
+            <com.lvfree.lvfee.view.CustomTextView
+                android:id="@+id/tvS"
+                style="@style/LblDateView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llNumberDate"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.lvfree.lvfee.view.CustomTextView
+                android:id="@+id/tvLblY"
+                style="@style/LblDateViewLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12" />
+
+            <com.lvfree.lvfee.view.CustomTextView
+                android:id="@+id/tvblM"
+                style="@style/LblDateViewLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12" />
+
+            <com.lvfree.lvfee.view.CustomTextView
+                android:id="@+id/tvblW"
+                style="@style/LblDateViewLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12" />
+
+            <com.lvfree.lvfee.view.CustomTextView
+                android:id="@+id/tvblD"
+                style="@style/LblDateViewLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12" />
+
+            <com.lvfree.lvfee.view.CustomTextView
+                android:id="@+id/tvblH"
+                style="@style/LblDateViewLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12" />
+
+            <com.lvfree.lvfee.view.CustomTextView
+                android:id="@+id/tvblMu"
+                style="@style/LblDateViewLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12" />
+
+            <com.lvfree.lvfee.view.CustomTextView
+                android:id="@+id/tvblS"
+                style="@style/LblDateViewLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

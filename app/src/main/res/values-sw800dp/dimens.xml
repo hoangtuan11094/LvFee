@@ -1,0 +1,14 @@
+<resources>
+  <dimen name="w_boder">
+    8.89dp
+  </dimen>
+  <dimen name="tsDate">
+    26.67sp
+  </dimen>
+  <dimen name="tsName">
+    40.0sp
+  </dimen>
+  <dimen name="tsTitle">
+    62.22sp
+  </dimen>
+</resources>

@@ -1,0 +1,6 @@
+<resources>
+  <dimen name="w_boder">4dp</dimen>
+  <dimen name="tsDate">12sp</dimen>
+  <dimen name="tsName">18sp</dimen>
+  <dimen name="tsTitle">28sp</dimen>
+</resources>
